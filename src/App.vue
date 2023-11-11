@@ -3,11 +3,11 @@
     <post-form @create="createPost"/>
     <post-list v-bind:posts="posts"/>
 
-  <div>
-    <button @click="addlike">Likes: {{ likes }}</button>
-    <button @click="adddislike">Dislikes: {{ dislikes }}</button>
-  </div>
+    <div>
+      <button @click="addlike">Likes: {{ likes }}</button>
+      <button @click="adddislike">Dislikes: {{ dislikes }}</button>
     </div>
+  </div>
 </template>
 
 <script>
@@ -56,7 +56,8 @@ export default {
   margin: 0;
   padding: 0;
 }
-.app{
+
+.app {
   padding: 20px;
 }
 

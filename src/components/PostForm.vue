@@ -5,11 +5,15 @@
            placeholder="Название">
     <input v-model="post.body" class="input" type="text"
            placeholder="Oпиcaниe">
-    <button class="btn" @click="createPost">Coздать</button>
+    <my-button
+        style="align-self: flex-end; margin-top: 10px;"
+        class="btn" @click="createPost">Coздать
+    </my-button>
   </form>
 </template>
 
 <script>
+
 export default {
   name: "PostForm",
   data() {
@@ -40,17 +44,10 @@ form {
 }
 
 .input {
-  width: 100%;
   border: 1px solid teal;
   padding: 10px 15px;
   margin-top: 15px;
 }
 
-.btn {
-  align-self: flex-end;
-  margin-top: 15px;
-  padding: 10px 15px;
-  background: none;
-  color: teal;
-}
+
 </style>
