@@ -1,7 +1,10 @@
 <template>
   <div class="app">
     <post-form @create="createPost"/>
-    <post-list v-bind:posts="posts"/>
+    <post-list
+        v-bind:posts="posts"
+        @remove="removePost"
+    />
 
     <div>
       <button @click="addlike">Likes: {{ likes }}</button>
@@ -30,6 +33,9 @@ export default {
     }
   },
   methods: {
+    removePost(post){
+      this.posts = this.posts.filter(p => p.id!== post.id)  ;
+    },
     createPost(post) {
       this.posts.push(post);
     },
